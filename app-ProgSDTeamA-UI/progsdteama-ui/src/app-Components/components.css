@@ -1,0 +1,22 @@
+.justify-content-right{
+    float: right; 
+    width: 50%
+}
+
+.justify-content-left{
+    float: left; 
+    width: 50%;
+}
+
+.wrapper {
+    border:1px solid #000;
+    display:inline-block;
+}
+
+input,
+button {
+    background-color:transparent;
+    border:0;
+}
+
+.resizedTextbox {width: 20px; }
