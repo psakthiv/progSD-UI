@@ -6,15 +6,11 @@ import { Image } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import { useNavigate, useLocation  } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import RideReport from './RideReport';
-import EWallet from './EWallet';
 
-const NavBar = (props) => {
+const TMNavbar = (props) => {
     
     const navigate = useNavigate(); 
     const location = useLocation();
-    const [modalShow, setModalShow] = React.useState(false);
-    const [ewalletShow, setewalletShow] = React.useState(false);
     const handleLogout = () =>{
         navigate("/")
       }
@@ -25,8 +21,8 @@ const NavBar = (props) => {
                             <Navbar.Brand href="#home"><Image
                                 alt=""
                                 src={logo}
-                                width="150px"
-                                height="150px"
+                                width="60"
+                                height="60"
                                 className="d-inline-block align-top"
                                 />{' '}
                                 
@@ -34,13 +30,8 @@ const NavBar = (props) => {
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="#Menu1">Products</Nav.Link>
-                                <Nav.Link href="#Menu2">About Us</Nav.Link>
-                                <Nav.Link onClick={() => setewalletShow(true)}>E-Wallet</Nav.Link> 
-                                    <EWallet show={ewalletShow} onHide={() => setewalletShow(false)} />
-                                <Nav.Link onClick={() => setModalShow(true)}>Report an Issue</Nav.Link>
-                                    <RideReport show={modalShow}
-                                    onHide={() => setModalShow(false)} />
+                                <Nav.Link href="#Menu1">Our Products</Nav.Link>
+                                <Nav.Link href="#Menu2">Who are we!!</Nav.Link>
                                 </Nav>
                          <Nav>
                             <Nav.Link href="#home">{props.text}<br></br><Button variant="link" onClick = {handleLogout}>
@@ -54,4 +45,4 @@ const NavBar = (props) => {
     );
 }
 
-export default NavBar;
+export default TMNavbar;

@@ -8,15 +8,19 @@ import {
   UNSAFE_enhanceManualRouteObjects,
 } from "react-router-dom";
 import Login from './app-Components/Login'
-import Home from './app-Components/RideRent'
+import RideRent from './app-Components/RideRent'
+import VehicleSelection from './app-Components/VehicleSelection'
+import RideReturn from './app-Components/RideReturn'
+import RideReport from './app-Components/RideReport-backup'
+
 
 function App() {
   return (
   <Router>
     <Routes>
       <Route exact path='/' element={<Login/>}/>
-      <Route exact path='/home' element={<Home/>}/>
-     
+      <Route exact path='/home' element={<RideRent/>}/>
+      <Route exact path='/rented' element={<RideReturn/>}/>
     </Routes>
   </Router>
   );
